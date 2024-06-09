@@ -16,7 +16,7 @@ thoughtRoutes.get('/:id', async (req, res) => {
 
 thoughtRoutes.post('/', async (req, res) => {
   const thought = new Thought(req.body);
-  await user.save();
+  await thought.save();
 
   res.json(thought);
 });
